@@ -6,11 +6,6 @@ from lib.write import create_dirs
 
 from tqdm import tqdm
 
-if os.path.isfile(args.output) or os.path.islink(args.output):
-    print ('output can\'t be a file or a link')
-    exit()
-    
-create_dirs(args.output)
 
 for directory in tqdm(os.listdir(args.directories), desc='directories', position=1):
     
